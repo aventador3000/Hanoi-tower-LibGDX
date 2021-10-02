@@ -32,14 +32,7 @@ abstract public class Game3D extends Game implements Disposable, Screen {
 
 	public static Array<DrawableObject> objects;
 
-	/**
-	 * Но дополнительно нам понадобится список объектов для удаления. Если вы
-	 * слышали о GC - сборщике мусора - то знаете, что Java освобождает память,
-	 * сама удаляя ненужные объекты. Но дело в том, что Java довольно медленная,
-	 * поэтому в 3D мы используем кусочки кода, написанные на C++. Проблема с
-	 * ними в том, что GC не может до них добраться, и освобождать от них память
-	 * нам приходится вручную.
-	 */
+	
 	ArrayList<Disposable> trashCan = new ArrayList<Disposable>();
 
 	/**
